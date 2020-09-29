@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "label": "npm: build",
+      "dependsOn": "npm: clean",
+      "detail": "Build the app into static files for production into the build directory.",
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "deploy",
+      "label": "npm: deploy",
+      "detail": "Run the build script and publish the result files into the gh-pages branch on GitHub."
+    },
+    {
+      "type": "npm",
+      "script": "develop",
+      "label": "npm: develop",
+      "detail": "Start the development server and watch files for hot reload."
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "label": "npm: start",
+      "detail": "Start the development server and watch files for hot reload."
+    },
+    {
+      "type": "npm",
+      "script": "clean",
+      "label": "npm: clean",
+      "detail": "Removes the build directory."
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "label": "npm: test",
+      "detail": "Starts the test runner."
+    }
+  ]
+}
